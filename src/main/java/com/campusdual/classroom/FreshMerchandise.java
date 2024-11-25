@@ -12,18 +12,12 @@ public class FreshMerchandise extends Merchandise {
         super(name, uniqueId, responsibleId);
     }
 
-    public FreshMerchandise(String name, String uniqueId, String responsibleId, int zone, String area, String shelf, int quantity) {
-        super(name, uniqueId, responsibleId, zone, area, shelf, quantity);
-    }
 
     public FreshMerchandise(String name, String uniqueId, String responsibleId, int zone, String area, String shelf, int quantity, Date expirationDate) {
         super(name, uniqueId, responsibleId, zone, area, shelf, quantity);
         this.expirationDate = expirationDate;
     }
 
-    public void setExpirationDate(Date expirationDate) {
-        this.expirationDate = expirationDate;
-    }
 
     public Date getExpirationDate() {
         return expirationDate;
@@ -49,6 +43,8 @@ public class FreshMerchandise extends Merchandise {
     }
 
     public void printSpecificData() {
+        System.out.println("Datos de la mercancia");
+
         System.out.println(getSpecificData());
     }
 }
